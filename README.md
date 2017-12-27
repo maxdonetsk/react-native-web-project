@@ -23,6 +23,7 @@ git clone --depth 1 https://github.com/maxdonetsk/react-native-web-project.git
 
 ## What is on it?
 
+ - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) on native platform
  - `babel-preset-react-native` is recommended in mobile and in web ( and it hot reloads! )
  - Jest and Flow
  - [Prettier](https://prettier.io/docs/en/install.html)

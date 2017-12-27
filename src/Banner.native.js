@@ -3,11 +3,15 @@
 import React from 'react';
 
 import { Platform, StyleSheet, Text, View } from 'react-native';
-// Use prebuilt version of RNVI in dist folder
+
+import Icon from 'react-native-vector-icons/dist/MaterialIcons';
+// // Use prebuilt version of RNVI in dist folder
+// import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
 const Banner = () => (
   <View style={styles.banner}>
     <Text style={styles.title}>React Native Web Boilerplate</Text>
+    <Icon name="code" size={30} color="#900" />
   </View>
 );
 
