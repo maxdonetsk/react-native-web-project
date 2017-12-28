@@ -24,7 +24,7 @@ git clone --depth 1 https://github.com/maxdonetsk/react-native-web-project.git
 ## What is on it?
 
  - [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons) on native platform
- - `babel-preset-react-native` is recommended in mobile and in web ( and it hot reloads! )
+ - `babel-preset-react-native` is recommended in mobile and in web (and it hot reloads!)
  - Jest and Flow
  - [Prettier](https://prettier.io/docs/en/install.html)
 
@@ -47,3 +47,12 @@ react-native run-android
 ```
 react-native run-ios
 ```
+
+## How to regenerate native projects?
+
+ - Change the name at `index.js` (and desirable in `index.web.js`) which is given as a parameter to AppRegistry.
+ - Change the name and version accordingly on `package.json`
+ - Delete `/ios` and `/android` folders which are remaining from your older app.
+ - Run `$react-native upgrade` to generate `/ios` and `/android` folders again.
+ - Run `$react-native link` for any native dependency.
+ - Finally run `$react-native run-ios` and `$react-native run-android`.
