@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-               BuildableName = "ReactNativeWebBoilerplate-tvOS.app"
-               BlueprintName = "ReactNativeWebBoilerplate-tvOS"
-               ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+               BuildableName = "ReactNativeWebProject-tvOS.app"
+               BlueprintName = "ReactNativeWebProject-tvOS"
+               ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "ReactNativeWebBoilerplate-tvOSTests.xctest"
-               BlueprintName = "ReactNativeWebBoilerplate-tvOSTests"
-               ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+               BuildableName = "ReactNativeWebProject-tvOSTests.xctest"
+               BlueprintName = "ReactNativeWebProject-tvOSTests"
+               ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "2D02E48F1E0B4A5D006451C7"
-               BuildableName = "ReactNativeWebBoilerplate-tvOSTests.xctest"
-               BlueprintName = "ReactNativeWebBoilerplate-tvOSTests"
-               ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+               BuildableName = "ReactNativeWebProject-tvOSTests.xctest"
+               BlueprintName = "ReactNativeWebProject-tvOSTests"
+               ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ReactNativeWebBoilerplate-tvOS.app"
-            BlueprintName = "ReactNativeWebBoilerplate-tvOS"
-            ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+            BuildableName = "ReactNativeWebProject-tvOS.app"
+            BlueprintName = "ReactNativeWebProject-tvOS"
+            ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ReactNativeWebBoilerplate-tvOS.app"
-            BlueprintName = "ReactNativeWebBoilerplate-tvOS"
-            ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+            BuildableName = "ReactNativeWebProject-tvOS.app"
+            BlueprintName = "ReactNativeWebProject-tvOS"
+            ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "2D02E47A1E0B4A5D006451C7"
-            BuildableName = "ReactNativeWebBoilerplate-tvOS.app"
-            BlueprintName = "ReactNativeWebBoilerplate-tvOS"
-            ReferencedContainer = "container:ReactNativeWebBoilerplate.xcodeproj">
+            BuildableName = "ReactNativeWebProject-tvOS.app"
+            BlueprintName = "ReactNativeWebProject-tvOS"
+            ReferencedContainer = "container:ReactNativeWebProject.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

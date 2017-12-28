@@ -1,4 +1,4 @@
-package com.reactnativewebboilerplate;
+package com.reactnativewebproject;
 
 import android.app.Application;
 

@@ -13,7 +13,7 @@ const renderApp = () => (
   </AppContainer>
 );
 
-AppRegistry.registerComponent('ReactNativeWebBoilerplate', () => renderApp);
+AppRegistry.registerComponent('ReactNativeWebProject', () => renderApp);
 
 if (module.hot) {
   // $FlowFixMe
@@ -26,9 +26,9 @@ if (module.hot) {
   );
 
   // App registration and rendering
-  AppRegistry.registerComponent('ReactNativeWebBoilerplate', () => App);
+  AppRegistry.registerComponent('ReactNativeWebProject', () => App);
 }
 
-AppRegistry.runApplication('ReactNativeWebBoilerplate', {
+AppRegistry.runApplication('ReactNativeWebProject', {
   rootTag: document.getElementById('root'),
 });
