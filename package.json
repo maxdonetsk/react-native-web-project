@@ -16,7 +16,9 @@
   "author": "max popovitch <max.popovitch@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "axios": "^0.17.1",
     "history": "^4.7.2",
+    "keymirror": "^0.1.1",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-native": "0.50.3",

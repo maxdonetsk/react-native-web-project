@@ -1,9 +1,9 @@
 import {combineReducers, createStore} from 'redux';
 
-import stationsListReducer from '../reducers/stationsList';
+import reposListReducer from '../reducers/reposList';
 
 const reducer = combineReducers({
-  stationsListReducer
+  reposListReducer
 });
 
 export default createStore(reducer);
