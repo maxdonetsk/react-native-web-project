@@ -2,13 +2,19 @@
 
 import React from 'react';
 
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 
-const Banner = () => (
-  <View style={styles.banner}>
+const Banner = ({onClick}) => (
+  <View style={styles.banner}
+        onClick={onClick}>
     <Text style={styles.title}>React Native Web Boilerplate</Text>
   </View>
 );
+
+Banner.defaultProps = {
+  displayName: 'Banner',
+  onClick: () => {}
+};
 
 export default Banner;
 

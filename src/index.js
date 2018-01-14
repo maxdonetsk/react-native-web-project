@@ -1,20 +1,22 @@
 /* @flow */
 
-import React from 'react';
+import React, {Component} from 'react';
+import {Provider} from 'react-redux';
+import {NativeRouter} from 'react-router-native';
 
-import { ScrollView, View, StatusBar } from 'react-native';
+import store from './store/configureStore';
+import Routes from './containers/Routes';
 
-import Banner from './Banner';
-
-class MainScreen extends React.Component<{}> {
+class App extends React.Component<{}> {
   render() {
     return (
-      <ScrollView>
-        <StatusBar backgroundColor="blue" barStyle="light-content" />
-        <Banner />
-      </ScrollView>
+      <NativeRouter>
+        <Provider store={store}>
+          <Routes/>
+        </Provider>
+      </NativeRouter>
     );
   }
 }
 
-export default MainScreen;
+export default App;

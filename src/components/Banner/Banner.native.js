@@ -2,18 +2,22 @@
 
 import React from 'react';
 
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import {Platform, StyleSheet, Text, TouchableOpacity} from 'react-native';
 
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
 // // Use prebuilt version of RNVI in dist folder
 // import Icon from 'react-native-vector-icons/dist/FontAwesome';
 
-const Banner = () => (
-  <View style={styles.banner}>
+const Banner = ({onPress}) => (
+  <TouchableOpacity style={styles.banner} onPress={onPress}>
     <Text style={styles.title}>React Native Web Boilerplate</Text>
-    <Icon name="code" size={30} color="#900" />
-  </View>
+    <Icon name="code" size={30} color="#900"/>
+  </TouchableOpacity>
 );
+
+Banner.defaultProps = {
+  onPress: () => {}
+};
 
 export default Banner;
 

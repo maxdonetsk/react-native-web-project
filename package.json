@@ -16,11 +16,17 @@
   "author": "max popovitch <max.popovitch@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "history": "^4.7.2",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-native": "0.50.3",
     "react-native-vector-icons": "^4.4.3",
-    "react-native-web": "^0.1.x"
+    "react-native-web": "^0.1.x",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-native": "^4.2.0",
+    "redux": "^3.7.2"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",
