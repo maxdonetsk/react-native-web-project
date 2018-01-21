@@ -19,6 +19,7 @@
     "axios": "^0.17.1",
     "history": "^4.7.2",
     "keymirror": "^0.1.1",
+    "prop-types": "^15.6.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-native": "0.50.3",
@@ -28,7 +29,8 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-router-native": "^4.2.0",
-    "redux": "^3.7.2"
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "babel-jest": "21.2.0",

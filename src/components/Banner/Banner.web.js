@@ -11,11 +11,6 @@ const Banner = ({onClick}) => (
   </View>
 );
 
-Banner.defaultProps = {
-  displayName: 'Banner',
-  onClick: () => {}
-};
-
 export default Banner;
 
 const styles = StyleSheet.create({

@@ -1,9 +1,8 @@
-import {combineReducers, createStore} from 'redux';
+import {combineReducers, createStore, applyMiddleware} from 'redux';
+import thunk from 'redux-thunk';
 
-import reposListReducer from '../reducers/reposList';
+import * as reducers from '../reducers';
 
-const reducer = combineReducers({
-  reposListReducer
-});
+const reducer = combineReducers(reducers);
 
-export default createStore(reducer);
+export default createStore(reducer, applyMiddleware(thunk));

@@ -1,25 +1,20 @@
-/* @flow */
+import {connect} from 'react-redux';
 
-import React, {Component} from 'react';
-import {ScrollView, StatusBar} from 'react-native';
-
-import Banner from '../components/Banner/Banner';
+import MainScreen from '../components/MainScreen';
 import ReposActions from '../actions/ReposActions';
 
-class MainScreen extends Component {
-  componentDidMount() {
-    ReposActions.searchRepos();
-  }
+const mapStateToProps = (state) => {
+  return {
+    reposList: state.reposList
+  };
+};
 
-  render() {
-    return (
-      <ScrollView>
-        <StatusBar backgroundColor="blue" barStyle="light-content"/>
-        <Banner onClick={() => this.props.history.push('/next')}
-                onPress={() => this.props.history.push('/next')}/>
-      </ScrollView>
-    );
-  }
-}
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: {
+      getAll: () => dispatch(ReposActions.getAll())
+    }
+  };
+};
 
-export default MainScreen;
+export default connect(mapStateToProps, mapDispatchToProps)(MainScreen);

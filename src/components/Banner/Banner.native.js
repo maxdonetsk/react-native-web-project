@@ -15,10 +15,6 @@ const Banner = ({onPress}) => (
   </TouchableOpacity>
 );
 
-Banner.defaultProps = {
-  onPress: () => {}
-};
-
 export default Banner;
 
 const styles = StyleSheet.create({
