@@ -1,7 +1,7 @@
 import {connect} from 'react-redux';
 
 import MainScreen from '../components/MainScreen';
-import ReposActions from '../actions/ReposActions';
+import {getAllRepos} from '../actions/ReposActions';
 
 const mapStateToProps = (state) => {
   return {
@@ -12,7 +12,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: {
-      getAll: () => dispatch(ReposActions.getAll())
+      getAll: () => dispatch(getAllRepos())
     }
   };
 };

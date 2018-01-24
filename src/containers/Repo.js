@@ -1,7 +1,8 @@
 import {connect} from 'react-redux';
 
 import Repo from '../components/RepoList/Repo';
-import ReposActions from '../actions/ReposActions';
+import {getRepo} from '../actions/ReposActions';
+import {clearRepo} from '../actions/ReposActions';
 
 const mapStateToProps = (state) => {
   return {
@@ -12,8 +13,8 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
   return {
     actions: {
-      getRepo: (full_name) => dispatch(ReposActions.getRepo(full_name)),
-      clearRepo: () => dispatch(ReposActions.clearRepo())
+      getRepo: (full_name) => dispatch(getRepo(full_name)),
+      clearRepo: () => dispatch(clearRepo())
     }
   };
 };
