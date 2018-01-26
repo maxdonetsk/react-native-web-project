@@ -1,8 +1,7 @@
 import {connect} from 'react-redux';
 
 import Repo from '../components/RepoList/Repo';
-import {getRepo} from '../actions/ReposActions';
-import {clearRepo} from '../actions/ReposActions';
+import {getRepo, clearRepo} from '../actions/ReposActions';
 
 const mapStateToProps = (state) => {
   return {
