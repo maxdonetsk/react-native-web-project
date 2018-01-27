@@ -1,8 +1,8 @@
 /* @flow */
 
 import React from 'react';
-
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Text, View} from 'react-native';
+import {styles} from './styles';
 
 const Banner = ({onClick}) => (
   <View style={styles.banner}
@@ -12,19 +12,3 @@ const Banner = ({onClick}) => (
 );
 
 export default Banner;
-
-const styles = StyleSheet.create({
-  banner: {
-    backgroundColor: '#673ab7',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: 16,
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: '200',
-    color: '#fff',
-    margin: 8,
-  },
-});

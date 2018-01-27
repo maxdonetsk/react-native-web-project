@@ -1,9 +1,8 @@
 /* @flow */
 
 import React from 'react';
-
-import {Platform, StyleSheet, Text, TouchableOpacity} from 'react-native';
-
+import {Text, TouchableOpacity} from 'react-native';
+import {styles} from './styles';
 import Icon from 'react-native-vector-icons/dist/MaterialIcons';
 // // Use prebuilt version of RNVI in dist folder
 // import Icon from 'react-native-vector-icons/dist/FontAwesome';
@@ -16,19 +15,3 @@ const Banner = ({onPress}) => (
 );
 
 export default Banner;
-
-const styles = StyleSheet.create({
-  banner: {
-    backgroundColor: '#673ab7',
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    padding: 16,
-    marginTop: Platform.OS === 'ios' ? 20 : 0,
-  },
-  title: {
-    fontSize: 18,
-    fontWeight: '200',
-    color: '#fff',
-    margin: 8,
-  },
-});
