@@ -1,7 +1,7 @@
 /* @flow */
 
 import React from 'react';
-import {TouchableOpacity, Text, Image} from 'react-native';
+import {TouchableOpacity, Text, Image, View} from 'react-native';
 import PropTypes from 'prop-types';
 import {repoListItemStyles} from "./styles";
 
@@ -9,9 +9,11 @@ const RepoListItem = ({repo, onPress}) => (
   <TouchableOpacity
     onPress={onPress}
     style={repoListItemStyles.item}>
-    <Image
-      source={{uri: repo.owner.avatar_url}}
-      style={repoListItemStyles.avatar}/>
+    <View style={repoListItemStyles.avatar}>
+      <Image
+        source={{uri: repo.owner.avatar_url}}
+        style={repoListItemStyles.avatarImage}/>
+    </View>
     <Text
       style={repoListItemStyles.name}>
       {repo.full_name}

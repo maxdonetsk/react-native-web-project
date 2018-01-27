@@ -11,12 +11,13 @@ export const repoListItemStyles = StyleSheet.create({
     alignItems: 'center'
   },
   avatar: {
-    width: 30,
-    height: 30,
     marginRight: 10,
-    borderBottomLeftRadius: 5,
-    borderBottomRightRadius: 5,
-    borderTopLeftRadius: 5,
-    borderTopRightRadius: 5,
+    borderRadius: 5,
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: 50,
+    height: 50,
+    borderRadius: 5,
   },
 });
