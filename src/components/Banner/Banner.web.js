@@ -2,12 +2,12 @@
 
 import React from 'react';
 import {Text, View} from 'react-native';
-import {styles} from './styles';
+import {bannerStyles} from './styles';
 
 const Banner = ({onClick}) => (
-  <View style={styles.banner}
+  <View style={bannerStyles.banner}
         onClick={onClick}>
-    <Text style={styles.title}>React Native Web Boilerplate</Text>
+    <Text style={bannerStyles.title}>React Native Web Boilerplate</Text>
   </View>
 );
 

@@ -1,19 +1,33 @@
 /* @flow */
 
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, Image} from 'react-native';
 import PropTypes from 'prop-types';
+import {repoListItemStyles} from './styles';
 
-const RepoListItem = ({full_name, onClick}) => {
+const RepoListItem = ({repo, onClick}) => {
   return (
-    <View onClick={onClick}>
-      <Text>{full_name}</Text>
+    <View
+      onClick={onClick}
+      style={repoListItemStyles.item}>
+      <Image
+        source={{uri: repo.owner.avatar_url}}
+        style={repoListItemStyles.avatar}/>
+      <Text
+        style={repoListItemStyles.name}>
+        {repo.full_name}
+      </Text>
     </View>
   );
 };
 
 RepoListItem.propTypes = {
-  full_name: PropTypes.string.isRequired,
+  repo: PropTypes.shape({
+    full_name: PropTypes.string.isRequired,
+    owner: PropTypes.shape({
+      avatar_url: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired,
   onClick: PropTypes.func.isRequired
 };
 

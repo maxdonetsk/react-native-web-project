@@ -28,7 +28,7 @@ class MainScreen extends Component {
         {(!isLoading && !!repos.length) && repos.map(repo => (
           <RepoListItem
             key={repo.id}
-            full_name={repo.full_name}
+            repo={repo}
             onClick={() => this._goItem(repo.full_name)}
             onPress={() => this._goItem(repo.full_name)}/>
         ))}

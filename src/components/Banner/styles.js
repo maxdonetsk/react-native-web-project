@@ -3,7 +3,7 @@
 import {Platform, StyleSheet} from 'react-native';
 import {PRIMARY} from '../../styles/colors';
 
-export const styles = StyleSheet.create({
+export const bannerStyles = StyleSheet.create({
   banner: {
     backgroundColor: PRIMARY,
     flexDirection: 'row',

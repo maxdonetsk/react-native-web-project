@@ -1,17 +1,31 @@
 /* @flow */
 
 import React from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import {TouchableOpacity, Text, Image} from 'react-native';
 import PropTypes from 'prop-types';
+import {repoListItemStyles} from "./styles";
 
-const RepoListItem = ({full_name, onPress}) => (
-  <TouchableOpacity onPress={onPress}>
-    <Text>{full_name}</Text>
+const RepoListItem = ({repo, onPress}) => (
+  <TouchableOpacity
+    onPress={onPress}
+    style={repoListItemStyles.item}>
+    <Image
+      source={{uri: repo.owner.avatar_url}}
+      style={repoListItemStyles.avatar}/>
+    <Text
+      style={repoListItemStyles.name}>
+      {repo.full_name}
+    </Text>
   </TouchableOpacity>
 );
 
 RepoListItem.propTypes = {
-  full_name: PropTypes.string.isRequired,
+  repo: PropTypes.shape({
+    full_name: PropTypes.string.isRequired,
+    owner: PropTypes.shape({
+      avatar_url: PropTypes.string.isRequired
+    }).isRequired
+  }).isRequired,
   onPress: PropTypes.func.isRequired
 };
 
