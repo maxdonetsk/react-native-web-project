@@ -1,10 +1,16 @@
 /* @flow */
 
 import React from 'react';
-import {Text} from 'react-native';
+import {ScrollView, StatusBar, Text} from 'react-native';
+import Header from './Header/Header';
 
 const NextScreen = (props) => (
-  <Text>Hello World!</Text>
+  <ScrollView>
+    <Header
+      title="NextScreen"
+      isBackButtonEnabled/>
+    <Text>Hello World!</Text>
+  </ScrollView>
 );
 
 export default NextScreen;

@@ -4,15 +4,13 @@ import React, {Component} from 'react';
 import {ScrollView, StatusBar, Text} from 'react-native';
 import PropTypes from 'prop-types';
 
-import Banner from './Banner/Banner';
+import Header from './Header/Header';
 import RepoListItem from './RepoList/RepoListItem';
 
 class MainScreen extends Component {
   componentDidMount() {
     this.props.actions.getAll();
   }
-
-  _goNext = () => this.props.history.push('/next');
 
   _goItem = full_name => this.props.history.push(`/repo/${full_name}`);
 
@@ -21,8 +19,9 @@ class MainScreen extends Component {
     return (
       <ScrollView>
         <StatusBar backgroundColor="blue" barStyle="light-content"/>
-        <Banner onClick={this._goNext}
-                onPress={this._goNext}/>
+        <Header
+          title="MainScreen"
+          isNextButtonEnabled/>
         {isLoading && <Text>Loading...</Text>}
         {(!isLoading && !!errMessage) && <Text>{errMessage}</Text>}
         {(!isLoading && !!repos.length) && repos.map(repo => (

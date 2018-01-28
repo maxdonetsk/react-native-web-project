@@ -1,7 +1,11 @@
 /* @flow */
 
 import React, {Component} from 'react';
-import {TouchableOpacity, Text} from 'react-native';
+import PropTypes from 'prop-types';
+import {ScrollView, View, Image, Text} from 'react-native';
+
+import Header from '../Header/Header';
+import {repoStyles} from "./styles";
 
 class Repo extends Component {
   componentDidMount() {
@@ -14,16 +18,37 @@ class Repo extends Component {
   }
 
   render() {
-    const {repo: {isLoading, errMessage, data}, history: {goBack}} = this.props;
+    const {isLoading, errMessage, data} = this.props.repo;
 
     return (
-      <TouchableOpacity onPress={goBack}>
+      <ScrollView>
+        <Header
+          title={(!isLoading && !errMessage) ? data.full_name : ''}
+          isBackButtonEnabled/>
         {isLoading && <Text>Loading...</Text>}
         {(!isLoading && !!errMessage) && <Text>{errMessage}</Text>}
-        {(!isLoading && !errMessage) && <Text>{JSON.stringify(data)}</Text>}
-      </TouchableOpacity>
+        {(!isLoading && !errMessage) && (
+          <View style={repoStyles.view}>
+            <Image
+              source={{uri: data.owner.avatar_url}}
+              style={repoStyles.avatarImage}/>
+          </View>
+        )}
+      </ScrollView>
     );
   }
+};
+
+Repo.propTypes = {
+  repo: PropTypes.shape({
+    isLoading: PropTypes.bool.isRequired,
+    errMessage: PropTypes.string.isRequired,
+    data: PropTypes.shape().isRequired
+  }).isRequired,
+  actions: PropTypes.shape({
+    getRepo: PropTypes.func.isRequired,
+    clearRepo: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default Repo;

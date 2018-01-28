@@ -3,11 +3,12 @@
 import {Platform, StyleSheet} from 'react-native';
 import {PRIMARY} from '../../styles/colors';
 
-export const bannerStyles = StyleSheet.create({
-  banner: {
+export const headerStyles = StyleSheet.create({
+  header: {
     backgroundColor: PRIMARY,
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    alignItems: 'center',
+    justifyContent: 'space-between',
     padding: 16,
     marginTop: Platform.OS === 'ios' ? 20 : 0,
   },
@@ -15,6 +16,14 @@ export const bannerStyles = StyleSheet.create({
     fontSize: 18,
     fontWeight: '200',
     color: '#fff',
-    margin: 8,
+    padding: 8,
+  },
+  button: {
+    backgroundColor: PRIMARY,
+    color: '#fff',
+    padding: 8,
+    fontSize: 18,
+    fontWeight: '200',
+    minWidth: 100,
   },
 });

@@ -1,8 +1,11 @@
 /* @flow */
 
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
 import PropTypes from 'prop-types';
+import {ScrollView, View, Image, Text} from 'react-native';
+
+import Header from '../Header/Header';
+import {repoStyles} from "./styles";
 
 class Repo extends Component {
   componentDidMount() {
@@ -15,14 +18,23 @@ class Repo extends Component {
   }
 
   render() {
-    const {repo: {isLoading, errMessage, data}, history: {goBack}} = this.props;
+    const {isLoading, errMessage, data} = this.props.repo;
 
     return (
-      <View onClick={goBack}>
+      <ScrollView>
+        <Header
+          title={(!isLoading && !errMessage) ? data.full_name : ''}
+          isBackButtonEnabled/>
         {isLoading && <Text>Loading...</Text>}
         {(!isLoading && !!errMessage) && <Text>{errMessage}</Text>}
-        {(!isLoading && !errMessage) && <Text>{JSON.stringify(data)}</Text>}
-      </View>
+        {(!isLoading && !errMessage) && (
+          <View style={repoStyles.view}>
+            <Image
+              source={{uri: data.owner.avatar_url}}
+              style={repoStyles.avatarImage}/>
+          </View>
+        )}
+      </ScrollView>
     );
   }
 };

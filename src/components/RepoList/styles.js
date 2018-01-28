@@ -1,7 +1,6 @@
 /* @flow */
 
-import {Platform, StyleSheet} from 'react-native';
-import {PRIMARY} from '../../styles/colors';
+import {StyleSheet} from 'react-native';
 
 export const repoListItemStyles = StyleSheet.create({
   item: {
@@ -19,5 +18,19 @@ export const repoListItemStyles = StyleSheet.create({
     width: 50,
     height: 50,
     borderRadius: 5,
+  },
+});
+
+export const repoStyles = StyleSheet.create({
+  view: {
+    padding: 10,
+    alignItems: 'center',
+    borderRadius: 50,
+    overflow: 'hidden',
+  },
+  avatarImage: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
   },
 });
