@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 
 import Header from './Header/Header';
 import RepoListItem from './RepoList/RepoListItem';
+import Loader from './Loader';
 
 class MainScreen extends Component {
   componentDidMount() {
@@ -23,7 +24,7 @@ class MainScreen extends Component {
           title="MainScreen"
           isNextButtonEnabled/>
         <ScrollView>
-          {isLoading && <Text>Loading...</Text>}
+          {isLoading && <Loader/>}
           {(!isLoading && !!errMessage) && <Text>{errMessage}</Text>}
           {(!isLoading && !!repos.length) && repos.map(repo => (
             <RepoListItem

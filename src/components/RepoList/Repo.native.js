@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import {ScrollView, View, Image, Text} from 'react-native';
 
 import Header from '../Header/Header';
+import Loader from '../Loader';
 import {repoStyles} from "./styles";
 
 class Repo extends Component {
@@ -25,7 +26,7 @@ class Repo extends Component {
         <Header
           title={(!isLoading && !errMessage) ? data.full_name : ''}
           isBackButtonEnabled/>
-        {isLoading && <Text>Loading...</Text>}
+        {isLoading && <Loader/>}
         {(!isLoading && !!errMessage) && <Text>{errMessage}</Text>}
         {(!isLoading && !errMessage) && (
           <View style={repoStyles.view}>
