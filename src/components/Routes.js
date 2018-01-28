@@ -1,9 +1,9 @@
 import React from 'react';
-import {Redirect, Route, Switch} from 'react-router';
+import {Route, Switch} from 'react-router';
 
-import MainScreen from './MainScreen';
-import NextScreen from '../components/NextScreen';
-import Repo from './Repo';
+import MainScreen from '../containers/MainScreen';
+import NextScreen from '../containers/NextScreen';
+import Repo from '../containers/Repo';
 
 const Root = () => (
   <Switch>

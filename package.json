@@ -23,6 +23,7 @@
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
     "react-native": "0.50.3",
+    "react-native-remote-svg": "^1.0.1",
     "react-native-vector-icons": "^4.4.3",
     "react-native-web": "^0.1.x",
     "react-redux": "^5.0.6",

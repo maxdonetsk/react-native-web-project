@@ -7,7 +7,7 @@ import {Router} from 'react-router-dom';
 
 import history from './utils/History/history';
 import store from './store/configureStore';
-import Routes from './containers/Routes';
+import Routes from './components/Routes';
 
 ReactDOM.render(
   <Router history={history}>
