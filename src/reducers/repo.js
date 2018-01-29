@@ -1,31 +1,22 @@
-import {ActionTypes} from '../constants/AppConstants';
+import {handleActions} from 'redux-actions';
+import {getRepoRequestSuccess, getRepoRequestFail, clearRepo} from '../actions/ReposActions';
 
-const initialState = {
+const defaultState = {
   isLoading: true,
   errMessage: '',
   data: {}
 };
 
-export default function reposList(state = initialState, action) {
-  switch (action.type) {
-    case ActionTypes.GET_REPO_REQUEST_SUCCESS:
-      return {
-        ...state,
-        data: action.data,
-        isLoading: false
-      };
-
-    case ActionTypes.GET_REPO_REQUEST_FAIL:
-      return {
-        ...state,
-        errMessage: action.errMessage,
-        isLoading: false
-      };
-
-    case ActionTypes.CLEAR_REPO:
-      return initialState;
-
-    default:
-      return state;
-  }
-}
+export default repo = handleActions({
+  [getRepoRequestSuccess]: (state, {payload}) => ({
+    ...state,
+    data: payload.data,
+    isLoading: false
+  }),
+  [getRepoRequestFail]: (state, {payload}) => ({
+    ...state,
+    errMessage: payload.errMessage,
+    isLoading: false
+  }),
+  [clearRepo]: () => defaultState
+}, defaultState);
