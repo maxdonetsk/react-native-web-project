@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {createActions} from 'redux-actions';
 
-import {BASE_URL, ActionTypes} from '../constants/AppConstants';
+import {apiRequests} from '../constants/AppConstants';
 
 export const {
   getReposRequestSuccess,
@@ -17,7 +17,7 @@ export const {
   CLEAR_REPO: () => {}
 });
 
-export const getAllRepos = () => dispatch => axios.get(`${BASE_URL}/search/repositories?q=map+language:javascript&sort=stars&order=desc`)
+export const getAllRepos = () => dispatch => axios.get(`${apiRequests.getAllRepos}`)
   .then(
     ({data}) => dispatch(getReposRequestSuccess(data)),
     ({message}) => dispatch(getReposRequestFail(message))
@@ -25,7 +25,7 @@ export const getAllRepos = () => dispatch => axios.get(`${BASE_URL}/search/repos
 
 export const getRepo = params => {
   return dispatch => {
-    return axios.get(`${BASE_URL}/repos/${params}`)
+    return axios.get(`${apiRequests.getRepo}${params}`)
       .then(
         ({data}) => dispatch(getRepoRequestSuccess(data)),
         ({message}) => dispatch(getRepoRequestFail(message))
