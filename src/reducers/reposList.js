@@ -7,7 +7,7 @@ const defaultState = {
   repos: []
 };
 
-export default reposList = handleActions({
+export default handleActions({
   [getReposRequestSuccess]: (state, {payload}) => ({
     ...state,
     repos: payload.data.items,
