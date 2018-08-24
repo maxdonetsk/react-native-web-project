@@ -9,10 +9,10 @@ const mapStateToProps = (state) => {
   };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
   return {
     actions: {
-      getRepo: (full_name) => dispatch(getRepo(full_name)),
+      getRepo: full_name => dispatch(getRepo(full_name)),
       clearRepo: () => dispatch(clearRepo())
     }
   };
